@@ -19,28 +19,29 @@ namespace Massiv6
                 array[i] = random.Next(minimumValue, maximumValue);
             }
 
-            foreach (int i in array)
+            foreach (int word in array)
             {
-                Console.Write(i + " ");
+                Console.Write(word + " ");
             }
 
             Console.Write("\n Пузырьковый метод сортировки \n");
 
             for (int i = 0; i < array.Length; i++)
             {
-                for (int j = 0; j < array.Length - 1; j++)
+                for (int ii = 0; ii < array.Length - 1; ii++)
                 {
-                    if (array[j] > array[j + 1])
+                    if (array[ii] > array[ii + 1])
                     {
-                        int t = array[j + 1];
-                        array[j + 1] = array[j];
-                        array[j] = t;
+                        int tempNumber = array[ii + 1];
+                        array[ii + 1] = array[ii];
+                        array[ii] = tempNumber;
                     }
                 }
             }
-            foreach (int i in array)
+
+            foreach (int word in array)
             {
-                Console.Write(i + " ");
+                Console.Write(word + " ");
             }
 
             Console.ReadLine();
